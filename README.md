@@ -1,37 +1,66 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NoOS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="../assets/img/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+<body>
+<div id="taskbar_legit">
+<table>
+    <tr>
+        <td class="home">
+            <img src="../assets/img/icon.png">
+        </td>
+        <td class="centerThingy">
+            <table>
+            <tr>
+                <td id="file_explorer"><i class="fas fa-folder-open"></i></td>
+                <td id="system"><i class="fas fa-microchip"></i></td>
+                <td id="browserTab"><i class="fas fa-window-maximize"></i></td>
+            </tr>
+            </table>
+        </td>
+        <td class="idk">
+            <table>
+                <tr>
+                    <td id="task_wifi"><i class="fas fa-wifi"></i></td>
+                    <td id="task_vol"><i class="fas fa-volume-up"></i></td>
+                    <td id="time"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
 
-You can use the [editor on GitHub](https://github.com/WolverinexD/wolverinexd.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+<div id="content-area">
+    <div id="wifi">
+        <h4><i class="fas fa-wifi"></i></h4>
+    </div>
+    <div id="volume">
+        <i class="fas fa-volume-up"></i><input type="range" min="0" max="100" id="volumeRange"><span id="level"></span>
+    </div>
+    <div class="window" id="browser">
+        <div class="window_titlebar">
+            <table>
+                <tr>
+                    <td style="width:5%;"><i class="fas fa-redo" id="reload"></i></td>
+                    <td style="width:90%;"><input type="text" placeholder="search DuckDuckGo or type a url" id="search" onkeypress="search(event)"></td>
+                    <td style="width:5%;"><i class="fas fa-times" onclick="closeWindow('browser')"></i></td>
+                </tr>
+            </table>
+        </div>
+        <iframe class="window_main" id="browser_data" name="browser_data" src="browser.html"></iframe>
+    </div>
+</div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/WolverinexD/wolverinexd.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<script src="https://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="main.js" type="text/javascript"></script>
+</body>
+</html>
